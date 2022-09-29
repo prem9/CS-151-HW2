@@ -13,10 +13,11 @@ public class Person
     private String firstName;
     private int age;
     private int sSN;
-    private String address;
+    private Address address;
     private String gender;
     private float weight;
-    public Person(String firstName2, String lastName2, int age2, int sSN2, String address2, String gender2, float weight2) 
+
+    public Person(String firstName2, String lastName2, int age2, int sSN2, Address address2, String gender2, float weight2) 
     {
         this.firstName = firstName2;
         this.lastName = lastName2;
@@ -26,6 +27,7 @@ public class Person
         this.gender = gender2;
         this.weight = weight2;
     }
+    
     /**
      * @param setLastName the last name which sets the lastName of Person
      */
@@ -85,14 +87,14 @@ public class Person
     /**
      * @param addressString sets the address of the  person
      */
-    public void setAddress(String addressString)
+    public void setAddress(Address addressSet)
     {
-        address = addressString;
+        address = addressSet;
     }
     /**
      * @return retrieves person's address
      */
-    public String getAddress()
+    public Address getAddress()
     {
         return address;
     }
