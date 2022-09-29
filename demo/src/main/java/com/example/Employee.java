@@ -9,99 +9,63 @@ package com.example;
 public class Employee extends Person
 {
     private int employeeId;
-    private String employeeStatus;
-    private String employeePay;
+    private String educationLevel;
+    private boolean directDeposit;
 
-    Employee(String firstName, String lastName, int age, int sSN, String address, String gender, float weight)
+    
+    Employee(String firstName, String lastName, int age, int sSN, Address address, String gender, float weight)
     {
         super(firstName, lastName, age, sSN, address, gender, weight);
     }
     /**
      * @param employeeIdSet sets the employees id
      */
-    public void setEmployeeId(int employeeIdSet)
+    public void setID(int employeeIdSet)
     {
         employeeId = employeeIdSet;
     }
     /**
      * @return retrieves employee Id
      */
-    public int getEmployeeId()
+    public int getID()
     {
         return employeeId;
     }
     /**
      * @param employeeStatusSet sets status of employee
      */
-    public void setEmployeeStatus(String employeeStatusSet)
+    public void setEducation(String educationLevelSet)
     {
-        employeeStatus = employeeStatusSet;
+        educationLevel = educationLevelSet;
     }
     /**
      * @return retrieves employee Id
      */
-    public String getEmployeeStatus()
+    public String getEducation()
     {
-        return employeeStatus;
+        return educationLevel;
     }
     /**
      * @param employeePaySet sets employee's pay
      */
-    public void setEmployeePay(String employeePaySet)
+    public void setDirectDeposit(Boolean depositSet)
     {
-        employeePay = employeePaySet;
+        directDeposit = depositSet;
     }
     /**
      * @return retrieves employee Id
      */
-    public String getEmployeePay()
+    public Boolean getDirectDeposit()
     {
-        return employeePay;
+        return directDeposit;
     }
-    /**
-     * @param time provides time worked
-     * @return gives the pay calculated depending on the time and salary
-     */
-    public double calculatePay(String time)
-    {
-       
-        double salary = Double.parseDouble(employeePay.replaceAll("[^0-9]", ""));
-        double totalPay = 0;
-        double timeInt = Double.parseDouble(time.replaceAll("[^0-9]", ""));
-        
-        if (employeePay.contains("hr"))
-        {
-            totalPay = salary * timeInt;
-        }
-        else if (employeePay.contains("yr"))
-        {
-            totalPay = (salary * timeInt)/52;
-            
-        }
-        totalPay = totalPay * 100;
-        totalPay = Math.round(totalPay);
-        totalPay = totalPay/100;
-        return totalPay;
-    }
-    /**
-     * @return prints out all the employee's info
-     */
     
     public String toString()
     {
-        String personInfo =  super.toString() + ", Employee Id: " + employeeId + ", Employee Status: " + employeeStatus + ", Employee Salary: " + employeePay;
+        String personInfo =  super.toString() + ", Employee Id: " + employeeId + ", Employee Education: " + educationLevel + ", Employee Direct Deposit: " + directDeposit;
         return personInfo;
     }
-    /**
-     * @return introduces employee
-     */
-    @Override
-    public void introduce()
-    {
-        //String introducePerson = "";
-        
-        System.out.println(toString());
-    }
+    
     
 }
 

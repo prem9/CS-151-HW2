@@ -6,63 +6,96 @@ package com.example;
  * @version 1.0
  * @since   9/22/22
  */
-public class Address extends Person
+public class Address
 {
-    private int employeeId;
-    private String educationLevel;
-    private boolean directDeposit;
-
-    Address(int string, String lastName, int age, int sSN, String address, String gender, float weight)
+    private int streetNum;
+    private String streetName;
+    private String city;
+    private String zip;
+    private String state;
+    Address(int streetNum, String streetName, String city, String zip, String state)
     {
-        super(firstName, lastName, age, sSN, address, gender, weight);
+        this.streetNum = streetNum;
+        this.streetName = streetName;
+        this.city = city;
+        this.zip = zip;
+        this.state = state;
+
     }
     /**
      * @param employeeIdSet sets the employees id
      */
-    public void setID(int employeeIdSet)
+    public void setStreetNum(int streetNumSet)
     {
-        employeeId = employeeIdSet;
+        streetNum = streetNumSet;
     }
     /**
      * @return retrieves employee Id
      */
-    public int getID()
+    public int getStreetNum()
     {
-        return employeeId;
+        return streetNum;
     }
     /**
      * @param employeeStatusSet sets status of employee
      */
-    public void setEducation(String educationLevelSet)
+    public void setStreetName(String streetNameSet)
     {
-        educationLevel = educationLevelSet;
+        streetName = streetNameSet;
     }
     /**
      * @return retrieves employee Id
      */
-    public String getEducation()
+    public String getStreetName()
     {
-        return educationLevel;
+        return streetName;
     }
     /**
      * @param employeePaySet sets employee's pay
      */
-    public void setDirectDeposit(Boolean depositSet)
+    public void setCity(String citySet)
     {
-        directDeposit = depositSet;
+        city = citySet;
     }
     /**
      * @return retrieves employee Id
      */
-    public Boolean getDirectDeposit()
+    public String getCity()
     {
-        return directDeposit;
+        return city;
     }
-    
+    /**
+     * @param employeePaySet sets employee's pay
+     */
+    public void setZip(String zipSet)
+    {
+        zip = zipSet;
+    }
+    /**
+     * @return retrieves employee Id
+     */
+    public String getZip()
+    {
+        return zip;
+    }
+    /**
+     * @param employeePaySet sets employee's pay
+     */
+    public void setState(String stateSet)
+    {
+        state = stateSet;
+    }
+    /**
+     * @return retrieves employee Id
+     */
+    public String getState()
+    {
+        return state;
+    }
     public String toString()
     {
-        String personInfo =  super.toString() + ", Employee Id: " + employeeId + ", Employee Education: " + educationLevel + ", Employee Direct Deposit: " + directDeposit;
-        return personInfo;
+        String addressInfo =  streetNum +" " + streetName + " " + city + " " + state + " " + zip;
+        return addressInfo;
     }
     
     

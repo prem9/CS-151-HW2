@@ -6,13 +6,17 @@ package com.example;
  * @version 1.0
  * @since   9/22/22
  */
-public class Customer 
+public class Customer extends Person
 {
     private int employeeId;
     private String employeeStatus;
     private String employeePay;
 
     
+    Customer(String firstName, String lastName, int age, int sSN, Address address, String gender, float weight)
+    {
+        super(firstName, lastName, age, sSN, address, gender, weight);
+    }
     /**
      * @param employeeIdSet sets the employees id
      */
@@ -92,13 +96,6 @@ public class Customer
     /**
      * @return introduces employee
      */
-    @Override
-    public void introduce()
-    {
-        //String introducePerson = "";
-        
-        System.out.println(toString());
-    }
     
 }
 
