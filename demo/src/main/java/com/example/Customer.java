@@ -8,9 +8,9 @@ package com.example;
  */
 public class Customer extends Person
 {
-    private int employeeId;
-    private String employeeStatus;
-    private String employeePay;
+    private int customerId;
+    private String payPreference;
+    
 
     
     Customer(String firstName, String lastName, int age, int sSN, Address address, String gender, float weight)
@@ -20,82 +20,37 @@ public class Customer extends Person
     /**
      * @param employeeIdSet sets the employees id
      */
-    public void setEmployeeId(int employeeIdSet)
+    public void setCustomerId(int customerIdSet)
     {
-        employeeId = employeeIdSet;
+        customerId = customerIdSet;
     }
     /**
      * @return retrieves employee Id
      */
-    public int getEmployeeId()
+    public int getCustomerId()
     {
-        return employeeId;
+        return customerId;
     }
     /**
      * @param employeeStatusSet sets status of employee
      */
-    public void setEmployeeStatus(String employeeStatusSet)
+    public void setPayPreference(String paypreferenceSet)
     {
-        employeeStatus = employeeStatusSet;
+        payPreference = paypreferenceSet;
     }
     /**
      * @return retrieves employee Id
      */
-    public String getEmployeeStatus()
+    public String getPayPreference()
     {
-        return employeeStatus;
+        return payPreference;
     }
-    /**
-     * @param employeePaySet sets employee's pay
-     */
-    public void setEmployeePay(String employeePaySet)
-    {
-        employeePay = employeePaySet;
-    }
-    /**
-     * @return retrieves employee Id
-     */
-    public String getEmployeePay()
-    {
-        return employeePay;
-    }
-    /**
-     * @param time provides time worked
-     * @return gives the pay calculated depending on the time and salary
-     */
-    public double calculatePay(String time)
-    {
-       
-        double salary = Double.parseDouble(employeePay.replaceAll("[^0-9]", ""));
-        double totalPay = 0;
-        double timeInt = Double.parseDouble(time.replaceAll("[^0-9]", ""));
-        
-        if (employeePay.contains("hr"))
-        {
-            totalPay = salary * timeInt;
-        }
-        else if (employeePay.contains("yr"))
-        {
-            totalPay = (salary * timeInt)/52;
-            
-        }
-        totalPay = totalPay * 100;
-        totalPay = Math.round(totalPay);
-        totalPay = totalPay/100;
-        return totalPay;
-    }
-    /**
-     * @return prints out all the employee's info
-     */
     
     public String toString()
     {
-        String personInfo =  super.toString() + ", Employee Id: " + employeeId + ", Employee Status: " + employeeStatus + ", Employee Salary: " + employeePay;
+        String personInfo =  super.toString() + ", Customer Id: " + customerId + ", Pay Preference: " + payPreference;
         return personInfo;
     }
-    /**
-     * @return introduces employee
-     */
     
 }
 
