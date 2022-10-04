@@ -1,10 +1,10 @@
 package com.example;
 
 /**
- * Employee class sets up employee
+ * Customer class extends Person
  * @author  Prem Agarwal
  * @version 1.0
- * @since   9/22/22
+ * @since   10/3/2022
  */
 public class Customer extends Person
 {
@@ -21,40 +21,42 @@ public class Customer extends Person
         super(firstName, lastName, age, i, address, gender, d);
     }
     /**
-     * @param employeeIdSet sets the employees id
+     * @param customerIdSet sets the customer's id
      */
     public void setCustomerId(int customerIdSet)
     {
         customerId = customerIdSet;
     }
     /**
-     * @return retrieves employee Id
+     * @return retrieves customer's Id
      */
     public int getCustomerId()
     {
         return customerId;
     }
     /**
-     * @param employeeStatusSet sets status of employee
+     * @param paypreferenceSet sets payPreference of customer
      */
     public void setPayPreference(String paypreferenceSet)
     {
         payPreference = paypreferenceSet;
     }
     /**
-     * @return retrieves employee Id
+     * @return retrieves pay preference
      */
     public String getPayPreference()
     {
         return payPreference;
     }
-    
+    /**
+     * @return retrieves customer's info without ssn
+     */
     public String toString()
     {
         String personInfo =  "Person Info: " + super.getFirstName() + " " + super.getLastName() + ", " + super.getAge() + " years old," + super.getAddress() + ", " + super.getGender() + ", weight: " + super.getWeight() + " lbs, Customer Id: " + customerId + ", Pay Preference: " + payPreference;
         return personInfo;
     }
-    public void introduce() //incomplete
+    public void introduce() 
     {
         String introducePerson = toString();
         System.out.print(introducePerson);

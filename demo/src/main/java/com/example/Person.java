@@ -5,7 +5,7 @@ package com.example;
  *
  * @author  Prem Agarwal
  * @version 1.0
- * @since   8/25/22
+ * @since   10/3/2022
  */
 public class Person 
 {
@@ -75,11 +75,11 @@ public class Person
         return age;
     }
     /**
-     * @param d sets the SSN of the person
+     * @param sSNset sets the SSN of the person
      */
-    public void setSSN(String d)
+    public void setSSN(String sSNset)
     {
-        sSN = d;
+        sSN = sSNset;
     }
     /**
      * @return retrives the ssn of the person
@@ -119,14 +119,14 @@ public class Person
     /**
      * @param weightSet sets the weight of the person
      */
-    public void setWeight(Float weightSet)
+    public void setWeight(Double weightSet)
     {
         weight = weightSet;
     }
     /**
      * @return returns weight of the person
      */
-    public double getWeight()
+    public Double getWeight()
     {
         return weight;
     }
@@ -138,10 +138,8 @@ public class Person
         String personInfo = "Person Info: " + firstName + " " + lastName + ", " + age + " years old, SSN: " + sSN + ", " + address + ", " + gender + ", weight: " + weight + " lbs";
         return personInfo;
     }
-    /**
-     * @return introduces the person
-     */
-    public void introduce() //incomplete
+    
+    public void introduce() 
     {
         String introducePerson = toString();
         System.out.print(introducePerson);

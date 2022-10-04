@@ -1,10 +1,10 @@
 package com.example;
 
 /**
- * Employee class sets up employee
+ * Employee class extends Person
  * @author  Prem Agarwal
  * @version 1.0
- * @since   9/22/22
+ * @since   10/3/2022
  */
 public class Employee extends Person
 {

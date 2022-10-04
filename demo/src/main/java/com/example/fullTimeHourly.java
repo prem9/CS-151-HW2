@@ -4,7 +4,7 @@ package com.example;
  * Employee class sets up employee
  * @author  Prem Agarwal
  * @version 1.0
- * @since   9/22/22
+ * @since   10/3/2022
  */
 public class fullTimeHourly extends fullTimeEmployee
 {
@@ -21,27 +21,32 @@ public class fullTimeHourly extends fullTimeEmployee
         super(firstName, lastName, age, sSN, address, gender, d);
     }
     /**
-     * @param employeeIdSet sets the employees id
+     * @param overtimePaySet sets the employee's overtimePay
      */
     public void setOvertimePay(double overtimePaySet)
     {
         overtimePay = overtimePaySet;
     }
     /**
-     * @return retrieves employee Id
+     * @return retrieves employee's Pay
      */
     public double getOvertimePay()
     {
         return overtimePay;
     }
     
-    
+    /**
+     * @return retrieves employee's info
+     */
     public String toString()
     {
         String personInfo =  super.toString() + ", Overtime Pay: " + overtimePay;
         return personInfo;
     }
-    public void introduce(boolean displaySSN) //incomplete
+    /**
+     * @param displaySSN displays SSN if true doesn't if false with personInfo
+     */
+    public void introduce(boolean displaySSN) 
     {
         if (displaySSN)
         {
@@ -53,6 +58,10 @@ public class fullTimeHourly extends fullTimeEmployee
             System.out.println("Person Info: " + super.getFirstName() + " " + super.getLastName() + ", " + super.getAge() + " years old, " + super.getAddress() + ", " + super.getGender() + ", weight: " + super.getWeight() + " lbs, Overtime Pay: " + overtimePay);
         }
     }
+    /**
+     * @param numHrs inputs amnt of hrs employee worked
+     * @return retrieves amnt of pay the employee gets
+     */
     public Double computePay(int numHrs)
     {
         double pay = (super.getBasePay() * numHrs) + overtimePay;

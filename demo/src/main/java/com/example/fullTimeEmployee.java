@@ -1,10 +1,10 @@
 package com.example;
 
 /**
- * Employee class sets up employee
+ * fullTimeEmployee class extends Employee
  * @author  Prem Agarwal
  * @version 1.0
- * @since   9/22/22
+ * @since   10/3/2022
  */
 public class fullTimeEmployee extends Employee
 {
@@ -21,26 +21,31 @@ public class fullTimeEmployee extends Employee
         super(firstName, lastName, age, sSN, address, gender, d);
     }
     /**
-     * @param employeeIdSet sets the employees id
+     * @param basePaySet sets the employee's basePay
      */
     public void setBasePay(double basePaySet)
     {
         basePay = basePaySet;
     }
     /**
-     * @return retrieves employee Id
+     * @return retrieves employee's basePay
      */
     public double getBasePay()
     {
         return basePay;
     }
     
-    
+    /**
+     * @return retrieves employee's info
+     */
     public String toString()
     {
         String personInfo =  super.toString() + ", Base Pay: " + basePay;
         return personInfo;
     }
+    /**
+     * @param displaySSN displays SSN if true doesn't if false
+     */
     public void introduce(boolean displaySSN) //incomplete
     {
         if (displaySSN)

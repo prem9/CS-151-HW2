@@ -1,10 +1,10 @@
 package com.example;
 
 /**
- * Employee class sets up employee
+ * partTimeHourly class extends Employee
  * @author  Prem Agarwal
  * @version 1.0
- * @since   9/22/22
+ * @since   10/3/2022
  */
 public class partTimeHourly extends Employee
 {
@@ -21,20 +21,23 @@ public class partTimeHourly extends Employee
         super(firstName, lastName, age, sSN, address, gender, d);
     }
     /**
-     * @param employeeIdSet sets the employees id
+     * @param basePaySet sets the employee's baseHourlyPay
      */
     public void setBaseHourlyPay(double basePaySet)
     {
         baseHourlyPay = basePaySet;
     }
     /**
-     * @return retrieves employee Id
+     * @return retrieves baseHourlyPay of employee
      */
     public double getBaseHourlyPay()
     {
         return baseHourlyPay;
     }
-    public void introduce(boolean displaySSN) //incomplete
+    /**
+     * @param displaySSN displays SSN depending if it is true or false
+     */
+    public void introduce(boolean displaySSN) 
     {
         if (displaySSN)
         {
@@ -46,10 +49,17 @@ public class partTimeHourly extends Employee
             System.out.println("Person Info: " + super.getFirstName() + " " + super.getLastName() + ", " + super.getAge() + " years old, " + super.getAddress() + ", " + super.getGender() + ", weight: " + super.getWeight() + " lbs, Base Pay: " + baseHourlyPay);
         }
     }
+    /**
+     * @param hrs inputs amnt of hrs worked
+     * @return retrieves amnt payed depending on base pay and hrs worked
+     */
     public Double computePay(int hrs)
     {
         return (hrs * baseHourlyPay);
     }
+    /**
+     * @return retrieves employee's info
+     */
     public String toString()
     {
         String personInfo =  super.toString() + ", Base Pay: " + baseHourlyPay;

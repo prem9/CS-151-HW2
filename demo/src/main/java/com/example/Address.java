@@ -1,10 +1,10 @@
 package com.example;
 
 /**
- * Employee class sets up employee
+ * Address class sets up Address for Person
  * @author  Prem Agarwal
  * @version 1.0
- * @since   9/22/22
+ * @since   10/3/2022
  */
 public class Address
 {
@@ -23,75 +23,78 @@ public class Address
 
     }
     /**
-     * @param employeeIdSet sets the employees id
+     * @param streetNumSet sets the streetNum
      */
     public void setStreetNum(int streetNumSet)
     {
         streetNum = streetNumSet;
     }
     /**
-     * @return retrieves employee Id
+     * @return retrieves streetNum
      */
     public int getStreetNum()
     {
         return streetNum;
     }
     /**
-     * @param employeeStatusSet sets status of employee
+     * @param streetNameSet sets streetName
      */
     public void setStreetName(String streetNameSet)
     {
         streetName = streetNameSet;
     }
     /**
-     * @return retrieves employee Id
+     * @return retrieves Street Name
      */
     public String getStreetName()
     {
         return streetName;
     }
     /**
-     * @param employeePaySet sets employee's pay
+     * @param citySet sets city
      */
     public void setCity(String citySet)
     {
         city = citySet;
     }
     /**
-     * @return retrieves employee Id
+     * @return retrieves city
      */
     public String getCity()
     {
         return city;
     }
     /**
-     * @param employeePaySet sets employee's pay
+     * @param zipSet sets zip
      */
     public void setZip(String zipSet)
     {
         zip = zipSet;
     }
     /**
-     * @return retrieves employee Id
+     * @return retrieves zip
      */
     public String getZip()
     {
         return zip;
     }
     /**
-     * @param employeePaySet sets employee's pay
+     * @param stateSet sets state
      */
     public void setState(String stateSet)
     {
         state = stateSet;
     }
     /**
-     * @return retrieves employee Id
+     * @return retrieves state
      */
     public String getState()
     {
         return state;
     }
+    /**
+     * @return string of all info in address
+     */
     public String toString()
     {
         String addressInfo =  streetNum +" " + streetName + " " + city + " " + state + " " + zip;

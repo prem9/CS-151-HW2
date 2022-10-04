@@ -1,10 +1,10 @@
 package com.example;
 
 /**
- * Employee class sets up employee
+ * fullTimeSalaried class extends fullTimeEmployee
  * @author  Prem Agarwal
  * @version 1.0
- * @since   9/22/22
+ * @since   10/3/2022
  */
 public class fullTimeSalaried extends fullTimeEmployee
 {
@@ -20,17 +20,17 @@ public class fullTimeSalaried extends fullTimeEmployee
         super(firstName, lastName, age, sSN, address, gender, d);
     }
     /**
-     * @param employeeIdSet sets the employees id
+     * @return employee's info
      */
-    
-    
-    
     public String toString()
     {
         String personInfo =  super.toString();
         return personInfo;
     }
-    public void introduce(boolean displaySSN) //incomplete
+    /**
+     * @param displaySSN displays SSN depending if it is true or false
+     */
+    public void introduce(boolean displaySSN) 
     {
         if (displaySSN)
         {
@@ -42,9 +42,13 @@ public class fullTimeSalaried extends fullTimeEmployee
             System.out.println("Person Info: " + super.getFirstName() + " " + super.getLastName() + ", " + super.getAge() + " years old, " + super.getAddress() + ", " + super.getGender() + ", weight: " + super.getWeight() + " lbs");
         }
     }
+    /**
+     * @param numWeeks inputs amnt of weeks employee worked
+     * @return retrieves amnt of pay depending of base pay and num of weeks worked
+     */
     public Double computePay(int numWeeks)
     {
-        double pay = (super.getBasePay() * numWeeks * 168) ;
+        double pay = (super.getBasePay() * numWeeks * 40) ;
         return pay;
     }
     

@@ -1,10 +1,10 @@
 package com.example;
 
 /**
- * Employee class sets up employee
+ * Executive class extends Employee
  * @author  Prem Agarwal
  * @version 1.0
- * @since   9/22/22
+ * @since   10/3/2022
  */
 public class Executive extends Employee
 {
@@ -21,44 +21,52 @@ public class Executive extends Employee
         super(firstName, lastName, age, sSN, address, gender, d);
     }
     /**
-     * @param employeeIdSet sets the employees id
+     * @param bonusSet sets the yearlyBonus of executive
      */
-    public void setBonus(Double bonuSet)
+    public void setBonus(Double bonusSet)
     {
-        yearlyBonus = bonuSet;
+        yearlyBonus = bonusSet;
     }
     /**
-     * @return retrieves employee Id
+     * @return retrieves executive yearly bonus
      */
-    public Double getBasePay()
+    public Double getBonus()
     {
         return yearlyBonus;
     }
     /**
-     * @param employeeIdSet sets the employees id
+     * @param compensationSet sets the executive's yearlyCompensation
      */
     public void setCompensation(Double compensationSet)
     {
         yearlyCompensation = compensationSet;
     }
     /**
-     * @return retrieves employee Id
+     * @return retrieves executive's yearly compensation
      */
     public Double getCompensation()
     {
         return yearlyCompensation;
     }
+    /**
+     * @return retrieves amnt payed for the year
+     */
     public Double computePay()
     {
         return yearlyCompensation + yearlyBonus;
     }
-    
+    /**
+     * @return retrieves executive's info
+     */
     public String toString()
     {
         String personInfo =  super.toString() + ", Yearly Bonus Pay: " + yearlyBonus + "Yearly Compensation" + yearlyCompensation;
         return personInfo;
     }
-    public void introduce(boolean displaySSN) //incomplete
+    /**
+     * @param displaySSN makes sure whether SSN is displayed or not
+     */
+    public void introduce(boolean displaySSN) 
     {
         if (displaySSN)
         {

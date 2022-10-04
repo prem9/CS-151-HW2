@@ -2,7 +2,10 @@ package com.example;
 
 
 /**
- * Unit test for simple App.
+ * EmployeeTest tests out all the other classes
+ * @author  Prem Agarwal
+ * @version 1.0
+ * @since   10/3/2022
  */
 public class EmployeeTest 
 {
