@@ -2,16 +2,14 @@ package com.example;
 
 
 /**
- * EmployeeTest tests out all the other classes
+ * BuisnessTest tests out all the other classes
  * @author  Prem Agarwal
  * @version 1.0
  * @since   10/3/2022
  */
-public class EmployeeTest 
+public class BuisnessTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
+    
     
     public static void main(String args[])
     {
