@@ -13,7 +13,7 @@ public class Address
     private String city;
     private String zip;
     private String state;
-    Address(int streetNum, String streetName, String city, String zip, String state)
+    public Address(int streetNum, String streetName, String city, String zip, String state)
     {
         this.streetNum = streetNum;
         this.streetName = streetName;

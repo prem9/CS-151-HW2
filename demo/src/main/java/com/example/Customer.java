@@ -8,14 +8,17 @@ package com.example;
  */
 public class Customer extends Person
 {
-    private int customerId;
-    private String payPreference;
+    private int customerId = 0;
+    private String payPreference = "payPreference";
     
-
-    
-    Customer(String firstName, String lastName, int age, int sSN, Address address, String gender, float weight)
+    Customer()
     {
-        super(firstName, lastName, age, sSN, address, gender, weight);
+
+    }
+    
+    Customer(String firstName, String lastName, int age, String i, Address address, String gender, double d)
+    {
+        super(firstName, lastName, age, i, address, gender, d);
     }
     /**
      * @param employeeIdSet sets the employees id
@@ -48,8 +51,17 @@ public class Customer extends Person
     
     public String toString()
     {
-        String personInfo =  super.toString() + ", Customer Id: " + customerId + ", Pay Preference: " + payPreference;
+        String personInfo =  "Person Info: " + super.getFirstName() + " " + super.getLastName() + ", " + super.getAge() + " years old," + super.getAddress() + ", " + super.getGender() + ", weight: " + super.getWeight() + " lbs, Customer Id: " + customerId + ", Pay Preference: " + payPreference;
         return personInfo;
+    }
+    public void introduce() //incomplete
+    {
+        String introducePerson = toString();
+        System.out.print(introducePerson);
+    }
+    public void makePayment()
+    {
+        System.out.println("Preferred Payment Method: " + payPreference);
     }
     
 }

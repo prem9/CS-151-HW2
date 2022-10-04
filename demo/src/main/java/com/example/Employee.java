@@ -8,12 +8,15 @@ package com.example;
  */
 public class Employee extends Person
 {
-    private int employeeId;
-    private String educationLevel;
-    private boolean directDeposit;
+    private int employeeId = 0;
+    private String educationLevel = "educationLevel";
+    private boolean directDeposit = false;
 
-    
-    Employee(String firstName, String lastName, int age, int sSN, Address address, String gender, float weight)
+    Employee()
+    {
+
+    }
+    Employee(String firstName, String lastName, int age, String sSN, Address address, String gender, double weight)
     {
         super(firstName, lastName, age, sSN, address, gender, weight);
     }

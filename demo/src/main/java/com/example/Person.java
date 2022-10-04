@@ -9,15 +9,19 @@ package com.example;
  */
 public class Person 
 {
-    private String lastName;
-    private String firstName;
-    private int age;
-    private int sSN;
-    private Address address;
-    private String gender;
-    private float weight;
+    private String lastName = "lastName";
+    private String firstName = "firstName";
+    private int age = 0;
+    private String sSN = "sSN";
+    private Address address = new Address(0, "streetName", "city", "zip", "state");
+    private String gender = "gender";
+    private double weight = 0;
 
-    public Person(String firstName2, String lastName2, int age2, int sSN2, Address address2, String gender2, float weight2) 
+    public Person()
+    {
+        
+    }
+    public Person(String firstName2, String lastName2, int age2, String sSN2, Address address2, String gender2, double d) 
     {
         this.firstName = firstName2;
         this.lastName = lastName2;
@@ -25,7 +29,7 @@ public class Person
         this.sSN = sSN2;
         this.address = address2;
         this.gender = gender2;
-        this.weight = weight2;
+        this.weight = d;
     }
     
     /**
@@ -73,14 +77,14 @@ public class Person
     /**
      * @param d sets the SSN of the person
      */
-    public void setSSN(int d)
+    public void setSSN(String d)
     {
         sSN = d;
     }
     /**
      * @return retrives the ssn of the person
      */
-    public int getsSN()
+    public String getsSN()
     {
         return sSN;
     }
@@ -122,7 +126,7 @@ public class Person
     /**
      * @return returns weight of the person
      */
-    public float getWeight()
+    public double getWeight()
     {
         return weight;
     }
